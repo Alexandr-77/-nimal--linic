@@ -66,6 +66,13 @@
   box-sizing: border-box; 
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
@@ -123,6 +130,14 @@ a {
     font-size: 20px;
     line-height: 150%; 
     color: #59443F;
+}
+.link-repeat {
+    font-family: 'Futura New';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFC59E;
+    text-transform: uppercase;
 }
 
 /* ======================================= */
@@ -630,26 +645,26 @@ a {
 
 /* ========== we /========== */
 
-/* ========== аppendix /========== */
-.аppendix {
+/* ========== appendix /========== */
+.appendix {
     background: #FFC59E;
     padding: 200px 0 120px;
 }
-.аppendix__container {
+.appendix__container {
     max-width: 1475px;
 }
-.аppendix__block {
+.appendix__block {
     display: flex;
     flex-wrap: wrap;
 }
-.аppendix__block-item {
+.appendix__block-item {
     flex: 0 0 50%;
 }
-.аppendix__block-text {
+.appendix__block-text {
     max-width: 830px;
     margin: 0 auto;
 }
-.аppendix__caption {
+.appendix__caption {
     font-family: 'Futura New';
     font-weight: normal;
     font-size: 30px;
@@ -658,19 +673,19 @@ a {
     padding-top: 50px;
     margin-bottom: 30px;  
 }
-.аppendix__titl {
+.appendix__titl {
     color: #FFFFFF;
     margin-bottom: 40px;
 }
-.аppendix__grup-image {
+.appendix__grup-image {
     display: flex;
     gap: 30px;
     margin-bottom: 50px;
 }
-.аppendix__img img {
+.appendix__img img {
     margin: 0 auto;
 }
-/* ========== аppendix /========== */
+/* ========== appendix /========== */
 
 /* ========== contacts /========== */
 .contacts {
@@ -845,8 +860,83 @@ a {
 
 
 
+/* ============== grid (обертка для страниц) ============= */
+.grid {
+    padding: 75px 0 75px;
+}
+.grid__container {
+    max-width: 1460px;
+    margin: 0 auto;
+}
+.grid__wr {
+    display: flex;
+    justify-content: right;
+}
+.grid__wr-top {
+    width: 62%;
+}
+.grid__link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 65px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.grid__link img {
+    margin-right: 10px;
+}
+.grid__block {
+    display: flex;
+    justify-content: space-between;
+}
+.grid__block-sidebar {
+    width: 33%;
+    min-height: 200px;
+}
+.grid__block-aside {
+    width: 62%;
+    min-height: 200px;
+}
+/* ============== grid (обертка для страниц) /============= */
 
 
+
+/* ========== therapy ========== */
+.therapy__sidebar-title {
+    margin-bottom: 100px;
+}
+.therapy__aside-box {
+    margin-bottom: 30px;
+}
+.therapy__aside-title {
+    margin-bottom: 30px;
+}
+.therapy__top-image {
+    margin-bottom: 50px;
+}
+.therapy__sidebar-text {
+    margin-bottom: 30px;
+    color: #C3B9B5;
+}
+.therapy__aside-text {
+    margin-bottom: 30px;
+}
+.therapy__aside-ul {
+    margin-bottom: 70px;
+}
+.therapy__aside-box-image {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+.therapy__aside-image {
+    width: 50%;
+}
+/* ========== therapy /========== */
 
 
 
@@ -921,10 +1011,10 @@ a {
     .we {
         padding-bottom: 200px;
     }
-    .аppendix {
+    .appendix {
         padding: 130px 0 100px;
     }
-    .аppendix__caption {
+    .appendix__caption {
         padding-top: 0;
     }
     .contacts {
@@ -944,12 +1034,21 @@ a {
         flex-wrap: wrap;
         max-width: 100%;
     }
+    .grid__block-sidebar {
+        width: 34%;
+    }
+    .therapy__sidebar-title {
+        font-size: 50px;
+    }
+    .therapy__aside-box-image {
+        gap: 30px;
+    }
 }
 /* ====== Медиа 1380px /====== */
 
 /* ====== Медиа 1140px ====== */
 @media (max-width: 1140px) {
-    .аppendix__block {
+    .appendix__block {
         flex-direction: column;
     }
 }
@@ -996,6 +1095,31 @@ a {
     .contacts {
         padding: 100px 0 100px;
     }
+    .grid {
+        padding: 50px 0;
+    }
+    .grid__wr {
+        justify-content: left;
+    }
+    .grid__wr-top {
+        width: 100%;
+    }
+    .grid__block {
+        flex-direction: column;
+    }
+    .grid__block-sidebar {
+        width: 100%;
+    }
+    .grid__block-aside {
+        width: 100%;
+    }
+    .grid__link {
+        margin-bottom: 30px;
+    }
+    .therapy__sidebar-title {
+        margin-bottom: 40px;
+    }
+    
 }
 /* ====== Медиа 998px /====== */
 
@@ -1038,10 +1162,10 @@ a {
     .we {
         padding-bottom: 100px;
     }
-    .аppendix {
+    .appendix {
         padding: 75px 0 75px;
     }
-    .аppendix__titl {
+    .appendix__titl {
         font-size: 10vw;
     }
     .contacts {
@@ -1056,6 +1180,9 @@ a {
     .contacts__block-map {
         width: 100%;
         height: 100vh;
+    }
+    .therapy__top-image {
+        margin-bottom: 30px;
     }
 }
 /* ====== Медиа 768px /====== */
@@ -1153,10 +1280,10 @@ a {
     .we__box {
         gap: 15px 0;
     }
-    .аppendix {
+    .appendix {
         padding: 50px 0 50px;
     }
-    .аppendix__grup-image {
+    .appendix__grup-image {
         gap: 5%;
         justify-content: space-between;
     }
@@ -1177,6 +1304,37 @@ a {
     }
     .footer__logo-title {
         font-size: 45px;
+    }
+    .grid {
+        padding: 20px 0 30px;
+    }
+    .grid__link {
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+    .therapy__sidebar-title {
+        font-size: 11vw;
+        line-height: 125%;
+        margin-bottom: 30px;
+    }
+    .therapy__sidebar-text {
+        font-size: 18px;
+    }
+    .therapy__top-image {
+        margin-bottom: 30px;
+    }
+    .therapy__aside-title {
+        margin-bottom: 15px;
+    }
+    .therapy__aside-text {
+        margin-bottom: 15px;
+    }
+    .therapy__aside-ul {
+        margin-bottom: 40px;
+    }
+    .therapy__aside-box-image {
+        gap: 3%;
+        margin-bottom: 15px;
     }
 }
 
